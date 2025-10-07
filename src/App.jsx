@@ -4,15 +4,30 @@ import viteLogo from '/vite.svg'
 import MyAwesomeh1 from './Components/firstComponent'
 import './App.css'
 
+function Header() {
+  return(
+<header>
+        <img src="react-logo.png" width="40px" alt="React Logo"/>
+        </header>
+
+  )
+}
+
 function Page() {
 return (
-<ol>
-<li>Hi</li>
-<li>There</li>
-<li>Dad</li>
-<li>Pasta</li>
-<li>Good</li>
-</ol>
+ <>
+        <Header/>
+        <main>
+        <h1>Reasons Im excited to learn React </h1>
+        <ol>
+            <li>React is a popular library, so I will be able to
+            fit in with all the coolest devs out there! 😎</li>
+            <li>I am more likely to get a job as a front end developer
+            if I know React</li>
+        </ol>
+        </main>
+        <footer>© 20xx Herstik development. All rights reserved.</footer>
+        </>
 )
 }
 
