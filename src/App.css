@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list-item {
+  font-size: 1.1rem;
+}
+.img{
+  width: 55px;
+}

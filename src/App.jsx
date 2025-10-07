@@ -5,19 +5,30 @@ import MyAwesomeh1 from './Components/firstComponent'
 import './App.css'
 
 function Header() {
-  return(
-<header>
-        <img src="react-logo.png" width="40px" alt="React Logo"/>
+    return (
+        <header className="header">
+            <img src="react-logo.png" className="img" alt="React logo" />
+            <nav>
+            <ul className="list">
+            <li className="nav-list-item">Pricing</li>
+            <li className="nav-list-item">About</li>
+            <li className="nav-list-item">Contact</li>
+            </ul>
+            </nav>
         </header>
+    )
+}
+
+function Footer() {
+  return(
+<footer>© 20xx Herstik development. All rights reserved.</footer>
 
   )
 }
 
-function Page() {
+function MainContent() {
 return (
- <>
-        <Header/>
-        <main>
+   <main>
         <h1>Reasons Im excited to learn React </h1>
         <ol>
             <li>React is a popular library, so I will be able to
@@ -26,7 +37,15 @@ return (
             if I know React</li>
         </ol>
         </main>
-        <footer>© 20xx Herstik development. All rights reserved.</footer>
+)
+}
+
+function Page() {
+return (
+ <>
+        <Header/>
+        <MainContent/>
+        <Footer/>
         </>
 )
 }
