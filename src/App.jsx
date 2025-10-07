@@ -4,6 +4,18 @@ import viteLogo from '/vite.svg'
 import MyAwesomeh1 from './Components/firstComponent'
 import './App.css'
 
+function Page() {
+return (
+<ol>
+<li>Hi</li>
+<li>There</li>
+<li>Dad</li>
+<li>Pasta</li>
+<li>Good</li>
+</ol>
+)
+}
+
 function App() {
   
 
@@ -20,6 +32,7 @@ function App() {
     <li>React is very popular</li>
     </ul>
     <MyAwesomeh1/>
+    <Page/>
     </>
   )
 }
