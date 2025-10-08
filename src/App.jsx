@@ -3,42 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import MyAwesomeh1 from './Components/firstComponent'
 import './App.css'
+import Header from './Components/Header'
+import MainContent from './Components/MainContent'
+import Footer from './Components/Footer'
 
-function Header() {
-    return (
-        <header className="header">
-            <img src="react-logo.png" className="img" alt="React logo" />
-            <nav>
-            <ul className="list">
-            <li className="nav-list-item">Pricing</li>
-            <li className="nav-list-item">About</li>
-            <li className="nav-list-item">Contact</li>
-            </ul>
-            </nav>
-        </header>
-    )
-}
 
-function Footer() {
-  return(
-<footer>© 20xx Herstik development. All rights reserved.</footer>
 
-  )
-}
 
-function MainContent() {
-return (
-   <main>
-        <h1>Reasons Im excited to learn React </h1>
-        <ol>
-            <li>React is a popular library, so I will be able to
-            fit in with all the coolest devs out there! 😎</li>
-            <li>I am more likely to get a job as a front end developer
-            if I know React</li>
-        </ol>
-        </main>
-)
-}
 
 function Page() {
 return (
