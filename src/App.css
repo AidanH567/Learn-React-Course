@@ -4,6 +4,7 @@ html, body, #root {
   width: 100%;
   height: 100%;
   font-family: inter;
+  background-color: #282D35;
 }
 
 .header {
@@ -27,7 +28,9 @@ padding-left: 20px;
   color: white;
   background-color: #282D35;
   padding-left: 20px;
- 
+ background-image: url('./assets/react-logo-half.png'); 
+ background-repeat: no-repeat;
+ background-position: right;
 }
 .header-ol ::marker{
   color: #61DAFB;
