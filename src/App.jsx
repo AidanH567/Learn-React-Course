@@ -16,7 +16,7 @@ function Page() {
 return (
  <>
         <Header/>
-        <MainContent/>
+        
         <Footer/>
         </>
 )
@@ -28,6 +28,7 @@ function App() {
   return (
     <>
     <Navbar/>
+    <MainContent/>
     </>
   )
 }

@@ -1,13 +1,15 @@
+import "../App.css"
 function MainContent() {
 return (
-   <main>
-        <h1>Reasons Im excited to learn React </h1>
-        <ol>
-            <li>React is a popular library, so I will be able to
-            fit in with all the coolest devs out there! 😎</li>
-            <li>I am more likely to get a job as a front end developer
-            if I know React</li>
-        </ol>
+    <main className="header-main">
+            <h1 style={{ margin: 0 }}>Fun Facts About React</h1>
+        <ul className="header-ol">
+            <li>hi</li>
+            <li>there</li>
+            <li>dude</li>
+            <li>whats</li>
+            <li>up</li>
+        </ul>
         </main>
 )
 }
