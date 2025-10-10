@@ -30,6 +30,7 @@ function App() {
     <>
     <Navbar/>
     <MainContent/>
+    
     <Info/>
     </>
   )

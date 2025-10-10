@@ -4,7 +4,7 @@ function Info() {
     return (
    <>
    <main className="info-main">
-   <img src="" alt="" />
+   <img src="../CardPhoto.png" alt="" className="info-img"/>
    <div className="info-text">
     <h1>Aidan Herstik</h1>
     <p>Front End Developer</p>
