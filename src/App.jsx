@@ -7,6 +7,7 @@ import Header from './Components/Header'
 import MainContent from './Components/MainContent'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
+import Info from './Components/Info'
 
 
 
@@ -29,6 +30,7 @@ function App() {
     <>
     <Navbar/>
     <MainContent/>
+    <Info/>
     </>
   )
 }
