@@ -4,7 +4,7 @@ function Info() {
     return (
    <>
    <main className="info-main">
-   <img style={{width :317  }}src="../CardPhoto.png" alt="" className="info-img"/>
+   <img style={{width :317}}src="../CardPhoto.png" alt="" className="info-img"/>
    <div className="info-text">
     <h1>Aidan Herstik</h1>
     <p>Front End Developer</p>

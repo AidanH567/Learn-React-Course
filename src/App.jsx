@@ -31,13 +31,13 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    
     <DigitalCardBox>
     <Info/>
     <Interests/>
     <About/>
     </DigitalCardBox>
-    <MainContent/>
+    
     
     
     </>

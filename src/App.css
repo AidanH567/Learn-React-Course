@@ -5,6 +5,8 @@ html, body, #root {
   height: 100%;
   font-family: inter;
   background-color: #282D35;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -37,12 +39,60 @@ padding-left: 20px;
   
 }
 .digital-card-box{
-  background-color: white;
-  max-width: 550px;
+  
+  max-width: 317px;
+  height: 780px;
   height: 868;
- background-color: #23252C;
+ background-color: #1A1b21;
  display: flex;
  justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.interests{
+  background-color: #23252C;
+  max-width: 550px;
+  height: auto;
+  color: white;
+  padding: 5px;
+  font-size: 10.24px;
+  display: flex;
+  flex-direction: column;
+  font-family: inter;
+  
+}
+.about{
+  background-color: #23252C;
+  max-width: 550px;
+  height: auto;
+  font-size: 10.24px;
+  color: white;
+  font-family: inter;
+  padding: 20px;
+  font-size: 10.24px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-top: 0;
+  
+}
+.about > h1{
+  margin-bottom: 0;
+}
+
+.interests > h1{
+  margin-bottom: 0;
+}
+
+
+.info-main{
+  background-color: #23252C;
+  max-width: 550px;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
 }
