@@ -8,6 +8,7 @@ import MainContent from './Components/MainContent'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import Info from './Components/Info'
+import DigitalCardBox from './Components/digitalCardBox'
 
 
 
@@ -29,9 +30,13 @@ function App() {
   return (
     <>
     <Navbar/>
+    <DigitalCardBox>
+    <Info/>
+
+    </DigitalCardBox>
     <MainContent/>
     
-    <Info/>
+    
     </>
   )
 }
