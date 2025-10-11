@@ -36,4 +36,13 @@ padding-left: 20px;
   color: #61DAFB;
   
 }
- 
+.digital-card-box{
+  background-color: white;
+  max-width: 550px;
+  height: 868;
+ background-color: #23252C;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

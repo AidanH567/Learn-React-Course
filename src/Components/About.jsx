@@ -2,7 +2,8 @@ function About() {
     return (
         <div>
             <h1>This is About Page</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Front-end developer and jazz musician passionate about clean design, responsive UI, and creative coding. 
+I enjoy bringing ideas to life through code, collaborating on React projects, and exploring how music and technology can inspire each other.</p>
         </div>
     );
 }
