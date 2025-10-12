@@ -11,6 +11,7 @@ import Info from './Components/Info'
 import DigitalCardBox from './Components/digitalCardBox'
 import Interests from './Components/Interests'
 import About from './Components/About'
+import Header2 from './Components/Header2'
 
 
 
@@ -32,12 +33,12 @@ function App() {
   return (
     <>
     
-    <DigitalCardBox>
+ {/*   <DigitalCardBox>
     <Info/>
     <Interests/>
     <About/>
-    </DigitalCardBox>
-    
+    </DigitalCardBox> */}
+    <Header2/>
     
     
     </>
