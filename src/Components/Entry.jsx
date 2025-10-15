@@ -8,7 +8,7 @@ function Entry() {
             <div className="info-div"></div>
             <h1 className="info-h1-country"></h1>
             <p> date</p>
-            <p> Infomation more info</p>
+            <p> Infomation more info changing some things</p>
         </div>
     )
 }
