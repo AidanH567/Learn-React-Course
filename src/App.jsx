@@ -12,6 +12,7 @@ import DigitalCardBox from './Components/digitalCardBox'
 import Interests from './Components/Interests'
 import About from './Components/About'
 import Header2 from './Components/Header2'
+import Entry from './Components/Entry'
 
 
 
@@ -39,7 +40,7 @@ function App() {
     <About/>
     </DigitalCardBox> */}
     <Header2/>
-    
+    <Entry/>
     
     </>
   )
