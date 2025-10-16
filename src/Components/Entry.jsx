@@ -1,4 +1,5 @@
 import MountFuji from '../assets/Mount-Fuji.png'
+import Marker from '../assets/Marker.png'
 
 
 function Entry() {
@@ -10,6 +11,11 @@ function Entry() {
             
             <div className="info-div">
                 <div className='info-div-2'>
+                    <img 
+  src={Marker} 
+  alt="Marker" 
+  style={{ width: "9px" }} 
+/>
                     <h2>Japan</h2>
                     <span>View on Google Maps</span>
                     </div>
