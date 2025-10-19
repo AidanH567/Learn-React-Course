@@ -14,6 +14,7 @@ import About from './Components/About'
 import Header2 from './Components/Header2'
 import Entry from './Components/Entry'
 import Contact from './Components/Contact'
+import Joke from './Components/Joke'
 
 
 
@@ -59,7 +60,12 @@ function App() {
                 phone="(0800) CAT KING"
                 email="pumpkin@scrimba.com"
             />
+            <Joke setup="why did the chicken cross the road" punchline="to fuck your mum"/>
+        <Joke setup="why did the chicken cross the road" punchline="to get to the otehr side"/>
+        <Joke setup="why did the chicken cross the road" punchline="idk you ask him"/>
+        <Joke setup="why did the chicken cross the road" punchline="to kill himself"/>
     </>
+    
   )
 }
 
