@@ -35,8 +35,9 @@ function App() {
 
   return (
     <>
+    <Entry/>
     
-<Contact
+{/*<Contact
                 img="./assets/Globe.png"
                 name="Mr. Whiskerson"
                 phone="(212) 555-1234"
@@ -64,8 +65,9 @@ function App() {
         <Joke setup="why did the chicken cross the road" punchline="to get to the otehr side"/>
         <Joke setup="why did the chicken cross the road" punchline="idk you ask him"/>
         <Joke setup="why did the chicken cross the road" punchline="to kill himself"/>
-    </>
     
+*/}
+</>
   )
 }
 
