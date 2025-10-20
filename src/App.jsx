@@ -37,7 +37,10 @@ function App() {
     <>
     <Header2/>
     <Entry
-    img = {MountFuji}
+    img={{
+        src: "https://scrimba.com/links/travel-journal-japan-image-url",
+        alt: "Mount Fuji"
+    }}
     country = "Japan"
     place = "Mount Fuji"
     date = "12 Jan, 2021 - 24 Jan, 2021"

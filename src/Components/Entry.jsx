@@ -6,7 +6,7 @@ function Entry(props) {
     return (
         <div className="entry-box">
             <div className="image-div">
-                <img src={props.img} alt="" className='journal-img' />
+                <img src={props.img.src} alt={props.img.alt} className='journal-img' />
             </div>
             
             <div className="info-div">
