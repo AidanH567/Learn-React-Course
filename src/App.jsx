@@ -15,7 +15,7 @@ import Header2 from './Components/Header2'
 import Entry from './Components/Entry'
 import Contact from './Components/Contact'
 import Joke from './Components/Joke'
-
+import MountFuji from './assets/Mount-Fuji.png'
 
 
 
@@ -35,7 +35,15 @@ function App() {
 
   return (
     <>
-    <Entry/>
+    <Header2/>
+    <Entry
+    img = {MountFuji}
+    country = "Japan"
+    place = "Mount Fuji"
+    date = "12 Jan, 2021 - 24 Jan, 2021"
+    info = "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+    />
+    
     
 {/*<Contact
                 img="./assets/Globe.png"
