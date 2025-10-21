@@ -19,9 +19,9 @@ function Entry(props) {
                     <h2>{props.country}</h2>
                     <span>View on Google Maps</span>
                     </div>
-            <h1 className="info-h1-country">{props.place}</h1>
-            <p className='info-date'>{props.date}</p>
-            <p className='info-summary'>{props.info}</p>
+            <h1 className="info-h1-country">{props.title}</h1>
+            <p className='info-date'>{props.dates}</p>
+            <p className='info-summary'>{props.text}</p>
         </div></div>
     )
 }

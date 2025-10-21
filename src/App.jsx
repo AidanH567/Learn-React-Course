@@ -22,11 +22,7 @@ const dataArray = data.map(item => {
   return (
     <Entry
       key={item.id}
-      img={item.img}
-      country={item.country}
-      place={item.title}
-      date={item.dates}
-      info={item.text}
+     {...item} 
     />
   )
 })
