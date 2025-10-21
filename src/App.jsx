@@ -17,6 +17,7 @@ import Contact from './Components/Contact'
 import Joke from './Components/Joke'
 import MountFuji from './assets/Mount-Fuji.png'
 import data from './data'
+import Header3 from './Components/Header3'
 
 const dataArray = data.map(item => {
   return (
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <>
-    <Header2/>
+    <Header3/>
     {dataArray}
     
     
