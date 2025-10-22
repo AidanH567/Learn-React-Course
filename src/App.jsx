@@ -18,6 +18,7 @@ import Joke from './Components/Joke'
 import MountFuji from './assets/Mount-Fuji.png'
 import data from './data'
 import Header3 from './Components/Header3'
+import Main from './Components/Main'
 
 const dataArray = data.map(item => {
   return (
@@ -44,39 +45,8 @@ function App() {
   return (
     <>
     <Header3/>
-    {dataArray}
+    <Main/>
     
-    
-{/*<Contact
-                img="./assets/Globe.png"
-                name="Mr. Whiskerson"
-                phone="(212) 555-1234"
-                email="mr.whiskaz@catnap.meow"
-            />
-            <Contact
-                img="./images/fluffykins.png"
-                name="Fluffykins"
-                phone="(212) 555-2345"
-                email="fluff@me.com"
-            />
-            <Contact
-                img="./images/felix.png"
-                name="Felix"
-                phone="(212) 555-4567"
-                email="thecat@hotmail.com"
-            />
-            <Contact 
-                img="./images/pumpkin.png"
-                name="Pumpkin"
-                phone="(0800) CAT KING"
-                email="pumpkin@scrimba.com"
-            />
-            <Joke setup="why did the chicken cross the road" punchline="to fuck your mum"/>
-        <Joke setup="why did the chicken cross the road" punchline="to get to the otehr side"/>
-        <Joke setup="why did the chicken cross the road" punchline="idk you ask him"/>
-        <Joke setup="why did the chicken cross the road" punchline="to kill himself"/>
-    
-*/}
 </>
   )
 }
