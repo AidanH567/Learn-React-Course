@@ -19,6 +19,7 @@ import MountFuji from './assets/Mount-Fuji.png'
 import data from './data'
 import Header3 from './Components/Header3'
 import Main from './Components/Main'
+import Form from './Components/Form'
 
 const dataArray = data.map(item => {
   return (
@@ -46,6 +47,7 @@ function App() {
     <>
     <Header3/>
     <Main/>
+    
     
 </>
   )
