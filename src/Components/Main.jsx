@@ -10,7 +10,7 @@ export default function Main() {
 
     function recipeClick(){
     
-        setRecipeShown(true)
+        setRecipeShown(prev => !prev)
     }
     /**
      * Challenge:
