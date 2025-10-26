@@ -1,25 +1,23 @@
-import { useState } from "react"
+import React from "react"
 
 export default function Main() {
 
-    /**
-     * Challenge: Update our app so that when the user enters a
-     * new ingredient and submits the form, it adds that new
-     * ingredient to our list!
-     */
-    const [ingredients, setIngredients] = useState(["Chicken", "Oregano", "Tomatoes"])
-    
-    
-   /** {const ingredients = ["Chicken", "Oregano", "Tomatoes"]}*/
+    const [ingredients, setIngredients] = React.useState([])
 
     const ingredientsListItems = ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
     ))
 
     function addIngredient(formData) {
-        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
         const newIngredient = formData.get("ingredient")
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
+    
+    /**
+     * Challenge:
+     * Using conditional rendering, only render the new <section> IF
+     * there are ingredients added to the list of ingredients.
+     */
 
     return (
         <main>
@@ -32,9 +30,18 @@ export default function Main() {
                 />
                 <button>Add ingredient</button>
             </form>
-            <ul>
-                {ingredientsListItems}
-            </ul>
+            {   ingredients.length > 0 ?
+                <section>
+                <h2>Ingredients on hand:</h2>
+                <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
+                <div className="get-recipe-container">
+                    <div>
+                        <h3>Ready for a recipe?</h3>
+                        <p>Generate a recipe from your list of ingredients.</p>
+                    </div>
+                    <button>Get a recipe</button>
+                </div>
+            </section> : null}
         </main>
     )
 }
