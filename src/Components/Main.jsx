@@ -28,6 +28,7 @@ export default function Main() {
     const [ingredients, setIngredients] = React.useState(
         ["all the main spices", "pasta", "ground beef", "tomato paste"]
     )
+    
     const [recipeShown, setRecipeShown] = React.useState(false)
     
     function toggleRecipeShown() {
