@@ -3,7 +3,7 @@ import IngredientsList from "./IngredientsList"
 import ClaudeRecipe from "./ClaudeRecipe"
 
 export default function Main() {
-    /**
+    /** 
      * Challenge: clean up our code!
      * Let's make a couple new components to make things a
      * little cleaner. (Notice: I'm not suggesting what we
