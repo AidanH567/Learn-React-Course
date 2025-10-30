@@ -20,6 +20,9 @@ import data from './data'
 import Header3 from './Components/Header3'
 import Main from './Components/Main'
 import Form from './Components/Form'
+import React from 'react'
+
+
 
 const dataArray = data.map(item => {
   return (
@@ -42,12 +45,26 @@ return (
 
 function App() {
   
-
+const [starWarsData, setStarWarsData] = React.useState({})
+    const [count, setCount] = React.useState(0)
+    
+    console.log("Rendered!")
+    
+    React.useEffect(function() {
+        console.log("Effect ran")
+        fetch("https://swapi.dev/api/people/1")
+            .then(res => res.json())
+            // .then(data => setStarWarsData(data))
+    })
   return (
     <>
     <Header3/>
     <Main/>
-    
+    <div>
+            <h2>The count is {count}</h2>
+            <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+        </div>
     
 </>
   )
