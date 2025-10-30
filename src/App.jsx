@@ -50,12 +50,9 @@ const [starWarsData, setStarWarsData] = React.useState({})
     
     console.log("Rendered!")
     
-    React.useEffect(function() {
+    React.useEffect(() => {
         console.log("Effect ran")
-        fetch("https://swapi.dev/api/people/1")
-            .then(res => res.json())
-            // .then(data => setStarWarsData(data))
-    })
+    },[count])
   return (
     <>
     <Header3/>
