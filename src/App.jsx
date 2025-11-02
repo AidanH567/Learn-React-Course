@@ -62,8 +62,11 @@ return (
 
 function App() {
   
-
-
+function generateAllNewDice() {
+   const randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
+  return randomNumbers
+}
+console.log(generateAllNewDice())
   return (
     <>
     
