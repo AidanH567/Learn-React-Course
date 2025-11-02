@@ -1,300 +1,51 @@
- html, body, #root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: inter;
-  background-color: #0B2434;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
- 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    background-color: #0B2434;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div#root {
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;}    
-  
-  
-  .main-box {
-  background-color: #F5F5F5;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.die-box {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  width: fit-content;
-  padding: 10px;
-  
-}
-
-.single-die{
-  height: 35.84px;
-  width: 35.84px;
-  background-color: #FFFFFF;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  border-radius: 15%;
-  font-family: Karla, sans-serif;
-  font-weight: 700
-}
-
-
-/*
-.header {
-   width: 100%;
-}
-.nav-header{
-  background-color: #21222a;
-  color: #61DAFB;
-  font-weight: 700;
-display: flex;
-width: 100%;
-align-items: center;
-gap: 50px;
-padding-left: 20px;
-
-}
-.header-img{
-  width: 55px;
-}
-.header-main{
-  color: white;
-  background-color: #282D35;
-  padding-left: 20px;
- background-image: url('./assets/react-logo-half.png'); 
- background-repeat: no-repeat;
- background-position: right;
-}
-.header-ol ::marker{
-  color: #61DAFB;
-  
-}
-.digital-card-box{
-  
-  max-width: 317px;
-  height: 780px;
-  height: 868;
- background-color: #1A1b21;
- display: flex;
- justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.interests{
-  background-color: #23252C;
-  max-width: 550px;
-  height: auto;
-  color: white;
-  padding: 5px;
-  font-size: 10.24px;
-  display: flex;
-  flex-direction: column;
-  font-family: inter;
-  
-}
-.about{
-  background-color: #23252C;
-  max-width: 550px;
-  height: auto;
-  font-size: 10.24px;
-  color: white;
-  font-family: inter;
-  padding: 20px;
-  font-size: 10.24px;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  margin-top: 0;
-  
-}
-.about > h1{
-  margin-bottom: 0;
-}
-
-.interests > h1{
-  margin-bottom: 0;
-}
-
-
-.info-main{
-  background-color: #23252C;
-  max-width: 550px;
-  height: auto;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  
-} */
-/* .header-box {
-    background-color: #F55A5A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 50px;
-}
-.header-box > h1 {
-    font-size: 16px;
-    color: white;
-    font-family: inter;
-}
-
-.header-box > img {
-    width: 24px;
-}
-.entry-box {
-  width: 470px;
-  height: 168px;
-  display: flex;
-  align-items: center;
-  font-family: inter;
-  margin-bottom: 36px;
-
-  
-}
-.journal-img {
-  width: 125px;
-  height: 168px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.info-div {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-}
-.info-div-2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-.info-div-2 > h2 {
-  font-size: 10px;
-  margin: 0;
-  padding-right: 10px;
-}
-.info-div-2 > span {
-  font-size: 12px;
-  text-decoration: underline;
-  color: gray;
-  cursor: pointer;
-}
-.info-div > h1 {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-}
-.info-date {
-  font-size: 12px;
-  margin-top: 20px ;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-.info-summary {
-  font-size: 12px;
-  margin-top: 0px;
-  line-height: 1.5;
-  color: gray;
-}
-.header {
-    display : flex;
-    align-items: center;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-    font-size: 32px;
-    justify-content: center;
-    gap: 30px;
-    font-weight: 400;
-    font-family: inter;
-}
-.header-img {
-    width: 43px;
-}
-.header h1 {
-    font-size: 32px;
-}
-main {
-    padding: 30px 30px 10px;
-}
-
-.add-ingredient-form {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    height: 38px;
-}
-
-.add-ingredient-form > input {
-    border-radius: 6px;
-    border: 1px solid #D1D5DB;
-    padding: 9px 13px;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    flex-grow: 1;
-    min-width: 150px;
+    height: 100%;
+    width: 100%;
+    max-height: 400px;
     max-width: 400px;
 }
 
-.add-ingredient-form > button {
-    font-family: Inter, sans-serif;
-    border-radius: 6px;
-    border: none;
-    background-color: #141413;
-    color: #FAFAF8;
-    width: 150px;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.add-ingredient-form > button::before {
-    content: "+";
-    margin-right: 5px;
-}
-.get-recipe-container {
+main {
+    background-color: #F5F5F5;
+    height: 100%;
+    border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    background: #F0EFEB;
-    padding: 10px 28px;
 }
 
-.get-recipe-container h3 {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 24px;
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
 }
 
-.get-recipe-container p {
-    color: #6B7280;
-    font-size: 0.875rem;
-    line-height: 20px;
-}
-
-.get-recipe-container button {
+.dice-container button {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
     border: none;
-    border-radius: 6px;
-    background: #D17557;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    color: #FAFAF8;
-    padding: 9px 17px;
+    background-color: white;
     font-family: Inter, sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.75rem;
+    font-weight: bold;
     cursor: pointer;
-} */
+}
