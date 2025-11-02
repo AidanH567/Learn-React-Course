@@ -21,7 +21,7 @@ import Header3 from './Components/Header3'
 import Main from './Components/Main'
 import Form from './Components/Form'
 import React from 'react'
-
+import Die from './Components/Die'
 
 
 const dataArray = data.map(item => {
@@ -42,31 +42,32 @@ return (
         </>
 )
 }
+// 'const [starWarsData, setStarWarsData] = React.useState({})
+//     const [count, setCount] = React.useState(0)
+    
+//     console.log("Rendered!")
+    
+//     React.useEffect(() => {
+//         fetch("https://swapi.dev/api/people/1")
+//         .then(res => res.json())
+//         .then( data => setStarWarsData(data) )
+//     },[])
+//     {/* <Header3/>
+//     <Main/>
+//     <div>
+//             <h2>The count is {count}</h2>
+//             <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+//             {starWarsData.name && <pre>{JSON.stringify(starWarsData, null, 2)}</pre>}
+//         </div> */}'
 
 function App() {
   
-const [starWarsData, setStarWarsData] = React.useState({})
-    const [count, setCount] = React.useState(0)
-    
-    console.log("Rendered!")
-    
-    React.useEffect(() => {
-        fetch("https://swapi.dev/api/people/1")
-        .then(res => res.json())
-        .then( data => setStarWarsData(data) )
-    },[])
-    {/* <Header3/>
-    <Main/>
-    <div>
-            <h2>The count is {count}</h2>
-            <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
-            {starWarsData.name && <pre>{JSON.stringify(starWarsData, null, 2)}</pre>}
-        </div> */}
+
 
   return (
     <>
     
-        <main className="main-box"> hello</main>
+        <main className="main-box"><Die value="5"/> </main>
     
 </>
   )
