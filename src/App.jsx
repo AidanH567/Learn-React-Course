@@ -63,8 +63,8 @@ return (
 function App() {
   
 function generateAllNewDice() {
-   const randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
-  return randomNumbers
+  //  const randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
+  return new Array(10).fill(0).map(() => Math.ceil(Math.random() * 6) )
 }
 console.log(generateAllNewDice())
   return (
