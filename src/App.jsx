@@ -63,26 +63,27 @@ return (
 function App() {
   
 function generateAllNewDice() {
-  //  const randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
-  return new Array(10).fill(0).map(() => Math.ceil(Math.random() * 6) )
-}
-console.log(generateAllNewDice())
+        return new Array(10)
+            .fill(0)
+            .map(() => Math.ceil(Math.random() * 6))
+    }
+  const [numArray, setNumArray] = React.useState(generateAllNewDice())
+
+  const diceElements = numArray.map((num, i) =>(
+    <Die key={i} value={num}/>
+  ))
+  
+  function rollDice() {
+    setNumArray(generateAllNewDice())
+  }
   return (
     <>
     
          <main>
             <div className="dice-container">
-                <Die value={1} />
-                <Die value={2} />
-                <Die value={3} />
-                <Die value={4} />
-                <Die value={5} />
-                <Die value={6} />
-                <Die value={1} />
-                <Die value={1} />
-                <Die value={1} />
-                <Die value={1} />
+                {diceElements}
             </div>
+            <button onClick={rollDice} className="roll-button">Roll Dice</button>
         </main>
        
     
