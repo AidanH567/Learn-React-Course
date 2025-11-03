@@ -22,6 +22,7 @@ import Main from './Components/Main'
 import Form from './Components/Form'
 import React from 'react'
 import Die from './Components/Die'
+import { nanoid } from "nanoid"
 
 
 const dataArray = data.map(item => {
@@ -67,11 +68,12 @@ function generateAllNewDice() {
             .fill(0)
             .map(() => ({value:Math.ceil(Math.random() * 6),
               isHeld: false,
+              id: nanoid()
             }))
     }
   const [numArray, setNumArray] = React.useState(generateAllNewDice())
 
-  const diceElements = numArray.map(die => <Die value={die.value} />)
+  const diceElements = numArray.map(die => <Die value={die.value} key={die.id} isHeld={die.isHeld} />)
   
   function rollDice() {
     setNumArray(generateAllNewDice())
