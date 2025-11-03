@@ -65,13 +65,13 @@ function App() {
 function generateAllNewDice() {
         return new Array(10)
             .fill(0)
-            .map(() => Math.ceil(Math.random() * 6))
+            .map(() => ({value:Math.ceil(Math.random() * 6),
+              isHeld: false,
+            }))
     }
   const [numArray, setNumArray] = React.useState(generateAllNewDice())
 
-  const diceElements = numArray.map((num, i) =>(
-    <Die key={i} value={num}/>
-  ))
+  const diceElements = numArray.map(die => <Die value={die.value} />)
   
   function rollDice() {
     setNumArray(generateAllNewDice())
