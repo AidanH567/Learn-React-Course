@@ -71,9 +71,12 @@ function generateAllNewDice() {
               id: nanoid()
             }))
     }
+    function hold(id) {
+      console.log(id)
+    }
   const [numArray, setNumArray] = React.useState(generateAllNewDice())
 
-  const diceElements = numArray.map(die => <Die value={die.value} key={die.id} isHeld={die.isHeld} />)
+  const diceElements = numArray.map(die => <Die value={die.value} key={die.id} isHeld={die.isHeld} hold={()=> hold(die.id)} />)
   
   function rollDice() {
     setNumArray(generateAllNewDice())
