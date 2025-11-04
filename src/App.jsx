@@ -23,6 +23,7 @@ import Form from './Components/Form'
 import React from 'react'
 import Die from './Components/Die'
 import { nanoid } from "nanoid"
+import Confetti from 'react-confetti'
 
 
 const dataArray = data.map(item => {
@@ -72,7 +73,7 @@ function generateAllNewDice() {
             }))
     }
     
-  const [numArray, setNumArray] = React.useState(generateAllNewDice())
+  const [numArray, setNumArray] = React.useState(() => generateAllNewDice())
 
   let gameWon = false
 
@@ -97,11 +98,15 @@ function generateAllNewDice() {
   const diceElements = numArray.map(die => <Die value={die.value} key={die.id} isHeld={die.isHeld} hold={()=> hold(die.id)} />)
   
   function rollDice() {
-    setNumArray(oldDice => oldDice.map(die =>
+    if (gameWon === false) {setNumArray(oldDice => oldDice.map(die =>
       die.isHeld 
       ? die
       : {...die, value: Math.ceil(Math.random() * 6)}
-    ))
+    ))}
+    else {
+      setNumArray(generateAllNewDice())
+    }
+    
   }
   return (
     <>
@@ -113,6 +118,7 @@ function generateAllNewDice() {
                 {diceElements}
             </div>
             {gameWon ? <button className="roll-button" onClick={rollDice}>New Game </button> : <button className="roll-button" onClick={rollDice}>Roll</button>}
+            {gameWon && <Confetti/>}
         </main>
        
     
