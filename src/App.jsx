@@ -24,6 +24,7 @@ import React from 'react'
 import Die from './Components/Die'
 import { nanoid } from "nanoid"
 import Confetti from 'react-confetti'
+import Header4 from './Components/Header4'
 
 
 const dataArray = data.map(item => {
@@ -62,68 +63,75 @@ return (
 //             {starWarsData.name && <pre>{JSON.stringify(starWarsData, null, 2)}</pre>}
 //         </div> */}'
 
-function App() {
+// function App() {
   
-function generateAllNewDice() {
-        return new Array(10)
-            .fill(0)
-            .map(() => ({value:Math.ceil(Math.random() * 6),
-              isHeld: false,
-              id: nanoid()
-            }))
-    }
+// function generateAllNewDice() {
+//         return new Array(10)
+//             .fill(0)
+//             .map(() => ({value:Math.ceil(Math.random() * 6),
+//               isHeld: false,
+//               id: nanoid()
+//             }))
+//     }
     
-  const [numArray, setNumArray] = React.useState(() => generateAllNewDice())
+//   const [numArray, setNumArray] = React.useState(() => generateAllNewDice())
 
-  let gameWon = false
+//   let gameWon = false
 
-  if (
-    numArray.every(die => die.isHeld) &&
-    numArray.every(die => die.value === numArray[0].value)
+//   if (
+//     numArray.every(die => die.isHeld) &&
+//     numArray.every(die => die.value === numArray[0].value)
     
-  ){
-      gameWon = true
-    }
+//   ){
+//       gameWon = true
+//     }
 
-   function hold(id) {
-  setNumArray(oldDice =>
-    oldDice.map(die =>
-      die.id === id
-        ? { ...die, isHeld: true } // toggle true/false
-        : die
-    )
-  )
-}
+//    function hold(id) {
+//   setNumArray(oldDice =>
+//     oldDice.map(die =>
+//       die.id === id
+//         ? { ...die, isHeld: true } // toggle true/false
+//         : die
+//     )
+//   )
+// }
 
-  const diceElements = numArray.map(die => <Die value={die.value} key={die.id} isHeld={die.isHeld} hold={()=> hold(die.id)} />)
+//   const diceElements = numArray.map(die => <Die value={die.value} key={die.id} isHeld={die.isHeld} hold={()=> hold(die.id)} />)
   
-  function rollDice() {
-    if (gameWon === false) {setNumArray(oldDice => oldDice.map(die =>
-      die.isHeld 
-      ? die
-      : {...die, value: Math.ceil(Math.random() * 6)}
-    ))}
-    else {
-      setNumArray(generateAllNewDice())
-    }
+//   function rollDice() {
+//     if (gameWon === false) {setNumArray(oldDice => oldDice.map(die =>
+//       die.isHeld 
+//       ? die
+//       : {...die, value: Math.ceil(Math.random() * 6)}
+//     ))}
+//     else {
+//       setNumArray(generateAllNewDice())
+//     }
     
-  }
-  return (
-    <>
+//   }
+//   return (
+//     <>
     
-         <main>
-          <h1 className="title">Tenzies</h1>
-            <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-            <div className="dice-container">
-                {diceElements}
-            </div>
-            {gameWon ? <button className="roll-button" onClick={rollDice}>New Game </button> : <button className="roll-button" onClick={rollDice}>Roll</button>}
-            {gameWon && <Confetti/>}
-        </main>
+//          <main>
+//           <h1 className="title">Tenzies</h1>
+//             <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+//             <div className="dice-container">
+//                 {diceElements}
+//             </div>
+//             {gameWon ? <button className="roll-button" onClick={rollDice}>New Game </button> : <button className="roll-button" onClick={rollDice}>Roll</button>}
+//             {gameWon && <Confetti/>}
+//         </main>
        
     
-</>
+// </>
+//   )
+// }
+function App() {
+
+  return (
+    <main>
+      <Header4/>
+    </main>
   )
 }
-
 export default App
