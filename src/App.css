@@ -48,7 +48,7 @@ main {
     border: none;
     background-color: white;
     font-family: Inter, sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.80rem; 
     font-weight: bold;
     cursor: pointer;
 }
