@@ -131,6 +131,10 @@ function App() {
   return (
     <main>
       <Header4/>
+       <section className="win-box">
+            <h1>You Win</h1>
+             <p>Well done! 🎉</p>
+            </section>
     </main>
   )
 }

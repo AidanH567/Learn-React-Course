@@ -94,3 +94,19 @@ header p {
     font-size: 14px;
     color: #8E8E8E;
 }
+.win-box{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    flex-direction: column;
+    background-color: #10A95B;
+    text-align: center;
+}
+.win-box h1{
+    margin: 10px 0px 5px 0px;
+    font-size: 20px;
+}
+.win-box p{
+    margin: 10px 0px 5px 0px;
+    font-size: 16px;
+}
