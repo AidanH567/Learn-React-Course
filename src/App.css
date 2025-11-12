@@ -129,4 +129,34 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    max-width: 500px;
+}
+.words {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20px;
+    font-size: 28px;
+    gap: 15px;
+}
+.letter {
+    background-color: #323232;
+    padding: 15px;
+    border-bottom: 2px solid white;
+}
+.keyboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.keyboard > button {
+    width: 40px;
+    height: 40px;
+    background-color: #FCBA29;
+    border: 1px solid white; 
+    border-radius: 7px;
+    cursor: pointer;
 }

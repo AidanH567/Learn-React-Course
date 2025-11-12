@@ -129,6 +129,24 @@ return (
 // }
 function App() {
 
+  const [currentWord, setCurrentWord] = useState("react")
+
+  const wordElements = currentWord.split("").map((word) => {
+ return (
+  <span className="letter">{word.toUpperCase()}</span> 
+ )
+    
+  }
+
+  )
+  const alphabet = "abcdefghijklmnopqrstuvwxyz"
+  const keyboard = alphabet.split("").map((letter, index) =>{
+    return (
+   <button>{letter}</button>
+  )}
+  )
+
+
   const languagesElements = languages.map((lan) => {
     const styles = {backgroundColor : lan.backgroundColor,
               color: lan.color}
@@ -150,6 +168,12 @@ function App() {
             <section className='lan-box'>
               {languagesElements}
               </section>
+                <section className="words">
+                {wordElements}
+            </section>
+            <section className="keyboard">
+                {keyboard}
+            </section>
     </main>
   )
 }
