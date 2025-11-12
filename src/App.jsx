@@ -25,6 +25,7 @@ import Die from './Components/Die'
 import { nanoid } from "nanoid"
 import Confetti from 'react-confetti'
 import Header4 from './Components/Header4'
+import { languages } from './languages'
 
 
 const dataArray = data.map(item => {
@@ -128,6 +129,17 @@ return (
 // }
 function App() {
 
+  const languagesElements = languages.map((lan) => {
+    const styles = {backgroundColor : lan.backgroundColor,
+              color: lan.color}
+    return (
+      <span style={styles}
+      className='lan-chip'
+      >{lan.name}</span>
+
+    )
+  })
+
   return (
     <main>
       <Header4/>
@@ -135,6 +147,9 @@ function App() {
             <h1>You Win</h1>
              <p>Well done! 🎉</p>
             </section>
+            <section className='lan-box'>
+              {languagesElements}
+              </section>
     </main>
   )
 }
