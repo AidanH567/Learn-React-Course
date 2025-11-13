@@ -130,6 +130,8 @@ return (
 function App() {
 
   const [currentWord, setCurrentWord] = useState("react")
+  const [guessedLetter, setGuessedLetter] = useState([])
+  console.log(guessedLetter)
 
   const wordElements = currentWord.split("").map((word) => {
  return (
@@ -139,13 +141,20 @@ function App() {
   }
 
   )
+
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
+
   const keyboard = alphabet.split("").map((letter, index) =>{
     return (
-   <button>{letter}</button>
+   <button key={index}
+   onClick={()=>addLetter(letter)}
+   >{letter.toLocaleUpperCase()}</button>
   )}
   )
 
+  function addLetter(letter){
+    setGuessedLetter(prevLetter => prevLetter.includes(letter) ? prevLetter : [...prevLetter,letter])
+  }
 
   const languagesElements = languages.map((lan) => {
     const styles = {backgroundColor : lan.backgroundColor,
@@ -174,6 +183,7 @@ function App() {
             <section className="keyboard">
                 {keyboard}
             </section>
+            <button className="new-game">New Game</button>
     </main>
   )
 }
