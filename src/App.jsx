@@ -132,7 +132,12 @@ function App() {
 
   const [currentWord, setCurrentWord] = useState("react")
   const [guessedLetter, setGuessedLetter] = useState([])
-  console.log(guessedLetter)
+
+  
+  
+  const wrongGuessCount = guessedLetter.filter(letter => !currentWord.includes(letter)).length
+  console.log(wrongGuessCount)
+  const isGameOver = wrongGuessCount > 8
 
   const wordElements = currentWord.split("").map((word) => {
     const isGussed = guessedLetter.includes(word)
@@ -167,13 +172,14 @@ function App() {
     setGuessedLetter(prevLetter => prevLetter.includes(letter) ? prevLetter : [...prevLetter,letter])
   }
 
-  const languagesElements = languages.map((lan) => {
-    
+  const languagesElements = languages.map((lan, index) => {
+    const isLost = wrongGuessCount <= index ? false : true;
+    const className = isLost ? "chip lost" : "chip"
     const styles = {backgroundColor : lan.backgroundColor,
               color: lan.color}
     return (
       <span style={styles}
-      className='lan-chip'
+      className={className}
       >{lan.name}</span>
 
     )
@@ -195,7 +201,7 @@ function App() {
             <section className="keyboard">
                 {keyboard}
             </section>
-            <button className="new-game">New Game</button>
+            {isGameOver && <button className="new-game">New Game</button>}
     </main>
   )
 }

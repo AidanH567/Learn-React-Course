@@ -120,10 +120,7 @@ header p {
     align-items: center;
     max-width: 350px;
 }
-.lan-chip{
-    border-radius: 3px;
-    padding: 4.5px;
-}
+
 main{
     display: flex;
     flex-direction: column;
@@ -177,4 +174,26 @@ section.keyboard > button.correct {
 
 section.keyboard > button.wrong {
     background-color: #EC5D49;
+}
+span.chip.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.lan-chip{
+    border-radius: 3px;
+    padding: 4.5px;
+}
+span.chip {
+    border-radius: 3px;
+    padding: 4.5px;
+    position: relative;
 }
