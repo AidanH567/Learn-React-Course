@@ -26,6 +26,7 @@ import { nanoid } from "nanoid"
 import Confetti from 'react-confetti'
 import Header4 from './Components/Header4'
 import { languages } from './languages'
+import clsx from 'clsx';
 
 
 const dataArray = data.map(item => {
@@ -134,8 +135,9 @@ function App() {
   console.log(guessedLetter)
 
   const wordElements = currentWord.split("").map((word) => {
+    const isGussed = guessedLetter.includes(word)
  return (
-  <span className="letter">{word.toUpperCase()}</span> 
+  <span className="letter">{isGussed ? word.toUpperCase() : "_"}</span> 
  )
     
   }
@@ -145,9 +147,18 @@ function App() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
   const keyboard = alphabet.split("").map((letter, index) =>{
+    const isGussed = guessedLetter.includes(letter)
+    const isCorrect = isGussed && currentWord.includes(letter)
+    const isWrong = isGussed && !currentWord.includes(letter)
+     const className = clsx({
+            correct: isCorrect,
+            wrong: isWrong
+        })
+
     return (
    <button key={index}
    onClick={()=>addLetter(letter)}
+   className={className}
    >{letter.toLocaleUpperCase()}</button>
   )}
   )
@@ -157,6 +168,7 @@ function App() {
   }
 
   const languagesElements = languages.map((lan) => {
+    
     const styles = {backgroundColor : lan.backgroundColor,
               color: lan.color}
     return (
