@@ -138,6 +138,8 @@ function App() {
   const wrongGuessCount = guessedLetter.filter(letter => !currentWord.includes(letter)).length
   console.log(wrongGuessCount)
   const isGameOver = wrongGuessCount > 8
+  const isGameWon = currentWord.split("").every(letter => guessedLetter.includes(letter))
+  const isGameLost = wrongGuessCount >= languages.length - 1
 
   const wordElements = currentWord.split("").map((word) => {
     const isGussed = guessedLetter.includes(word)
@@ -185,12 +187,20 @@ function App() {
     )
   })
 
+  const gameStatusClass = clsx("win-box", {
+    won: isGameWon,
+    lost: isGameLost
+  })
+
   return (
     <main>
       <Header4/>
-       <section className="win-box">
-            <h1>You Win</h1>
-             <p>Well done! 🎉</p>
+       <section className={gameStatusClass}>
+            {isGameWon ? (<><h1>You Win</h1>
+             <p>Well done! 🎉</p></>) :
+             isGameLost ? (<><h1>You Lose!</h1>
+             <p>You lose! Better start learning Assembly 😭 🎉</p></>) :
+            null }
             </section>
             <section className='lan-box'>
               {languagesElements}

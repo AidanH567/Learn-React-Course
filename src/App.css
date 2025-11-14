@@ -104,6 +104,15 @@ header p {
     border-radius: 4px;
     width: 352px;
 }
+.win-box.won {
+background-color: #10A95B;
+
+
+}
+.win-box.lost{
+    background-color: #BA2A2A;
+    
+}
 .win-box > h1{
     margin: 10px 0px 5px 0px;
     font-size: 20px;
