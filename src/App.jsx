@@ -27,7 +27,7 @@ import Confetti from 'react-confetti'
 import Header4 from './Components/Header4'
 import { languages } from './languages'
 import clsx from 'clsx';
-
+import { getFarewellText } from "./utils"
 
 const dataArray = data.map(item => {
   return (
@@ -137,11 +137,13 @@ function App() {
   
   const wrongGuessCount = guessedLetter.filter(letter => !currentWord.includes(letter)).length
   console.log(wrongGuessCount)
-  const isGameOver = wrongGuessCount > 8
   const isGameWon = currentWord.split("").every(letter => guessedLetter.includes(letter))
   const isGameLost = wrongGuessCount >= languages.length - 1
+  const isGameOver = isGameWon || isGameLost
+  const lastGuessedLetter = guessedLetter[guessedLetter.length - 1]
+  const isLastGuessIncorrect = lastGuessedLetter && !currentWord.includes(lastGuessedLetter)
 
-  const wordElements = currentWord.split("").map((word) => {
+  const wordElements = currentWord.split("").map((word) => {  
     const isGussed = guessedLetter.includes(word)
  return (
   <span className="letter">{isGussed ? word.toUpperCase() : "_"}</span> 
@@ -166,6 +168,7 @@ function App() {
    <button key={index}
    onClick={()=>addLetter(letter)}
    className={className}
+   disabled={isGameOver}
    >{letter.toLocaleUpperCase()}</button>
   )}
   )
@@ -189,18 +192,35 @@ function App() {
 
   const gameStatusClass = clsx("win-box", {
     won: isGameWon,
-    lost: isGameLost
+    lost: isGameLost,
+    farewell: !isGameOver && isLastGuessIncorrect
   })
 
+   function renderGameStatus(){
+    if (!isGameOver && isLastGuessIncorrect) {
+      return (
+       <p className="farewell-message">
+                    {getFarewellText(languages[wrongGuessCount - 1].name)}
+                </p>
+    ) }
+
+    if (isGameWon) {
+      return (
+       <><h1>You Win</h1>
+             <p>Well done! 🎉</p></>
+    ) }
+    if (isGameLost) {
+      return (
+       <><h1>You Lose!</h1>
+             <p>You lose! Better start learning Assembly 😭 🎉</p></>
+    ) }
+    return null
+   }
   return (
     <main>
       <Header4/>
        <section className={gameStatusClass}>
-            {isGameWon ? (<><h1>You Win</h1>
-             <p>Well done! 🎉</p></>) :
-             isGameLost ? (<><h1>You Lose!</h1>
-             <p>You lose! Better start learning Assembly 😭 🎉</p></>) :
-            null }
+            {renderGameStatus()}
             </section>
             <section className='lan-box'>
               {languagesElements}

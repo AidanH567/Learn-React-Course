@@ -206,3 +206,11 @@ span.chip {
     padding: 4.5px;
     position: relative;
 }
+section.win-box.farewell {
+    background-color: #7A5EA7;
+    border: 1px dashed #323232;
+}
+section.keyboard > button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5
+}
