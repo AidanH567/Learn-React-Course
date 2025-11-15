@@ -27,7 +27,7 @@ import Confetti from 'react-confetti'
 import Header4 from './Components/Header4'
 import { languages } from './languages'
 import clsx from 'clsx';
-import { getFarewellText } from "./utils"
+import { getFarewellText,randomWord } from "./utils"
 
 const dataArray = data.map(item => {
   return (
@@ -130,7 +130,7 @@ return (
 // }
 function App() {
 
-  const [currentWord, setCurrentWord] = useState("react")
+  const [currentWord, setCurrentWord] = useState(randomWord())
   const [guessedLetter, setGuessedLetter] = useState([])
 
   
