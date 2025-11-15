@@ -28,6 +28,7 @@ import Header4 from './Components/Header4'
 import { languages } from './languages'
 import clsx from 'clsx';
 import { getFarewellText,randomWord } from "./utils"
+import Confetti from "react-confetti"
 
 const dataArray = data.map(item => {
   return (
@@ -130,7 +131,7 @@ return (
 // }
 function App() {
 
-  const [currentWord, setCurrentWord] = useState(randomWord())
+  const [currentWord, setCurrentWord] = useState(() => randomWord())
   const [guessedLetter, setGuessedLetter] = useState([])
 
   
@@ -216,8 +217,16 @@ function App() {
     ) }
     return null
    }
+
+   function resetGame(){
+    setCurrentWord(randomWord())
+    setGuessedLetter([])
+   }
   return (
     <main>
+       {isGameWon && <Confetti 
+       recycle={false}
+      numberOfPieces={1000}/>}
       <Header4/>
        <section className={gameStatusClass}>
             {renderGameStatus()}
@@ -231,7 +240,7 @@ function App() {
             <section className="keyboard">
                 {keyboard}
             </section>
-            {isGameOver && <button className="new-game">New Game</button>}
+            {isGameOver && <button className="new-game" onClick={resetGame}>New Game</button>}
     </main>
   )
 }
