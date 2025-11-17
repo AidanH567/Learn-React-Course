@@ -28,7 +28,7 @@ import Header4 from './Components/Header4'
 import { languages } from './languages'
 import clsx from 'clsx';
 import { getFarewellText,randomWord } from "./utils"
-import Confetti from "react-confetti"
+
 
 const dataArray = data.map(item => {
   return (
