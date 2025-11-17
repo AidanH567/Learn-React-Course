@@ -223,6 +223,7 @@ function App() {
     setGuessedLetter([])
    }
   return (
+    <>
     <main>
        {isGameWon && <Confetti 
        recycle={false}
@@ -241,13 +242,19 @@ function App() {
                 {keyboard}
             </section>
             {isGameOver && <button className="new-game" onClick={resetGame}>New Game</button>}
-           <div class="container">
-            <div class="header">HEADER</div>
-            <div class="menu">MENU</div>
-            <div class="content">CONTENT</div>
-            <div class="footer">FOOTER</div>
-        </div>
+         
     </main>
+      <div class="container">
+            <div className='header1'>
+              <h1>Home</h1>
+              <h1>Search</h1>
+              <h1>Login</h1>
+              </div>
+            <div className='menu'>menu</div>
+            <div className='content'>content</div>
+            <div className='footer'>footer</div>
+        </div>
+        </>
   )
 }
 export default App
