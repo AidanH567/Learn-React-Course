@@ -241,6 +241,12 @@ function App() {
                 {keyboard}
             </section>
             {isGameOver && <button className="new-game" onClick={resetGame}>New Game</button>}
+           <div class="container">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div>
     </main>
   )
 }
