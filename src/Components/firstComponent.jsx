@@ -1,9 +1,12 @@
-function MyAwesomeh1() {
+function MyAwesomeH1() {
   return (
     <>
-      <h1>Awesome I Love it i love it soo much making cahnges yay</h1>
+      <h1>
+        Awesome! I love it, I love it **so** much. Making changes, yay!
+      </h1>
+      <p>This is an expanded version of your component.</p>
     </>
   )
 }
 
-export default MyAwesomeh1
+export default MyAwesomeH1
