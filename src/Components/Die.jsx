@@ -1,7 +1,17 @@
 export default function Die(props) {
+    // Determine background colour based on held state
+    const isHeld = props.isHeld;
+    const backgroundStyle = isHeld 
+        ? { backgroundColor: "#59E391" } 
+        : {};
+
+    // Return one button with conditional styling
     return (
-        props.isHeld === true
-      ? <button onClick={props.hold} style={{ backgroundColor: "#59E391" }}>{props.value}</button>
-      :  <button onClick={props.hold} >{props.value}</button>
-    )
+        <button 
+            onClick={props.hold} 
+            style={backgroundStyle}
+        >
+            {props.value}
+        </button>
+    );
 }
